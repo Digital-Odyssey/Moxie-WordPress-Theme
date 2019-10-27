@@ -1,0 +1,87 @@
+.preloader {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999999999;
+	
+	@include transition(all,0.5s);
+}
+.preloader .bar {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    margin: -3px 0 0 0;
+	
+	@include transition(all,0.5s);
+}
+.preloader .bar .value {
+    display: block;
+    position: relative;
+    width: 0;
+    height: 5px;
+    margin: 0 auto;
+    background: #111;
+}
+.preloader .bar .value .left,
+.preloader .bar .value .right {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 5px;
+    height: 5px;
+    background: #111;
+    border-radius: 3px;
+}
+.preloader .bar .value .left {
+    left: -3px;
+}
+.preloader .bar .value .right {
+    right: -2px;
+}
+.preloader .logo,
+.preloader .percent {
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 48px;
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    color: #111;
+    margin: -92px 0 0 -25%;
+	
+	@include transition(all,0.5s);
+}
+.preloader .percent {
+    font-size: 20px;
+    margin: 46px 0 0 -25%;
+}
+.preloader .top,
+.preloader .bottom {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    background: #fff;
+	
+	@include transition(all,0.5s);
+}
+.preloader .top.moving,
+.preloader .bottom.moving {
+    border-color: #000;
+}
+.preloader .top {
+    top: 0;
+}
+.preloader .bottom {
+    bottom: 0;
+}

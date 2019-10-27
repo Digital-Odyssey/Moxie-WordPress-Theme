@@ -1,0 +1,74 @@
+<wpml-config>
+    <admin-texts>
+        <key name="moxie_options">
+            <key name="opt-pulse-slides">
+                <key name="0">
+                  <key name="title" />
+                  <key name="description" />
+                  <key name="url" />
+                </key>
+                <key name="1">
+                  <key name="title" />
+                  <key name="description" />
+                  <key name="url" />
+                </key>
+                <key name="2">
+                  <key name="title" />
+                  <key name="description" />
+                  <key name="url" />
+                </key>
+            </key>
+			<key name="opt-client-slides">
+                <key name="0">
+                  <key name="title" />
+                  <key name="description" />
+                  <key name="url" />
+                </key>
+                <key name="1">
+                  <key name="title" />
+                  <key name="description" />
+                  <key name="url" />
+                </key>
+                <key name="2">
+                  <key name="title" />
+                  <key name="description" />
+                  <key name="url" />
+                </key>
+            </key>
+			<key name="opt-panel-slides">
+                <key name="0">
+                  <key name="title" />
+                  <key name="description" />
+                  <key name="url" />
+                </key>
+                <key name="1">
+                  <key name="title" />
+                  <key name="description" />
+                  <key name="url" />
+                </key>
+                <key name="2">
+                  <key name="title" />
+                  <key name="description" />
+                  <key name="url" />
+                </key>
+            </key>
+			<key name="opt-bio-slides">
+                <key name="0">
+                  <key name="title" />
+                  <key name="description" />
+                  <key name="url" />
+                </key>
+                <key name="1">
+                  <key name="title" />
+                  <key name="description" />
+                  <key name="url" />
+                </key>
+                <key name="2">
+                  <key name="title" />
+                  <key name="description" />
+                  <key name="url" />
+                </key>
+            </key>			
+        </key>
+    </admin-texts>
+</wpml-config>

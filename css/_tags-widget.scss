@@ -1,0 +1,23 @@
+.pm-footer-tags-list {
+	list-style:none;
+	padding:0px;
+	margin:0px;	
+}
+
+.pm-footer-tags-list li:before {
+	content:"";
+	margin:0;
+	padding:0px;
+}
+
+.pm-footer-tags-list li {
+	float:left;
+	margin-right:1px;	
+	margin-bottom:1px;
+}
+
+.pm-footer-tags-list li a:hover {
+	background-color:$primaryColor;
+	color:white;	
+}
+

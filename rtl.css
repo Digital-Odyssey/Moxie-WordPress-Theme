@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	direction:rtl;
+	unicode-bidi:embed;
+}
+
+.pm-skills-logo-text-desc, .pm-skills-logo-text-title, .pm-skills-logo-text-percentage, .pm-gallery-post-details .title, .pm-pricing-table-pricing-container .desc, .pm-pricing-table-details-info, .pm-home-news-post-title, .pm-home-news-post-excerpt, .pm-staff-member-system-bio-desc, .pm-services-tab-system-desc p, .pm_services_tab_icon_container a, .pm-caption-excerpt, .pm-caption h1, .sf-menu a, .pm-search-field-mobile {
+    direction: rtl;
+}
+
+.pm-mobile-menu-overlay {
+	right:0;	
+}
+
+#pm-pulse-container, #pm-slider {
+    direction: ltr;
+}
+
+.container {
+	direction: ltr;	
+}
+
+.pm-dots {
+	direction:ltr;	
+}
+
+.owl-carousel {
+    direction: ltr;
+}
+
+.flexslider {
+	direction:ltr;	
+}

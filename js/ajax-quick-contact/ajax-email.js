@@ -1,0 +1,96 @@
+(function($) {
+
+	
+	$('#pm_full_name').focus(function(e) {
+		$(this).removeClass('invalid_field');
+	});
+	
+	$('#pm_email_address').focus(function(e) {
+		$(this).removeClass('invalid_field');
+	});
+	
+	$('#pm_message').focus(function(e) {
+		$(this).removeClass('invalid_field');
+	});
+	
+	$('.pm_quick_contact_submit').on('click', function(e) {
+							
+		e.preventDefault();
+								
+		//var $this = $(this);
+		
+		$('#pm_form_response').html(wordpressOptionsObject.fieldValidation);
+		
+		// Collect data from inputs
+		var reg_nonce = $('#moxie_theme_send_quick_contact_nonce').val();
+		
+		var reg_full_name = $('#pm_full_name').val();
+		var reg_email_address =  $('#pm_email_address').val();
+		var reg_message =  $('#pm_message').val();
+		var reg_recipient_email =  $('#pm_email_address_contact').val();
+		
+		/**
+		 * AJAX URL where to send data 
+		 * (from localize_script)
+		 */
+		var ajax_url = moxie_theme_register_vars.moxie_theme_ajax_url;
+	
+		// Data to send
+		var data = {
+		  action: 'send_quick_contact_form',
+		  nonce: reg_nonce,
+		  full_name: reg_full_name,
+		  email_address: reg_email_address,
+		  message: reg_message,
+		  recipient: reg_recipient_email
+		};
+		
+		// Do AJAX request
+		$.post( ajax_url, data, function(response) {
+	
+		  // If we have response
+		  if(response) {
+			  			  				
+			if(response === 'full_name_error') {
+			  
+				$('#pm_form_response').html(wordpressOptionsObject.quickContact1);
+				$('#pm_full_name').addClass('invalid_field');
+			  
+			} else if( response === 'email_error' ){
+				
+			    $('#pm_form_response').html(wordpressOptionsObject.quickContact2);
+				$('#pm_email_address').addClass('invalid_field');
+
+			} else if( response === 'message_error' ){
+				
+			  	$('#pm_form_response').html(wordpressOptionsObject.quickContact3);
+				$('#pm_message').addClass('invalid_field');
+
+			}  else if( response === 'success' ){
+				
+				$('#pm_form_response').html(wordpressOptionsObject.successMessage).css({ 'marginTop' : -20 });
+				$('.pm_quick_contact_submit').css({
+					'opacity' : 0,
+					'visibility' : 'hidden'
+				});
+
+			  
+			} else if( response === 'failed' ){
+				
+				$('#pm_form_response').html(wordpressOptionsObject.failedMessage).css({ 'marginTop' : -20 });
+				$('.pm_quick_contact_submit').css({
+					'opacity' : 0,
+					'visibility' : 'hidden'
+				});
+				
+			} else {
+			  $('.result-message').html( response );
+			  $('.result-message').show();
+			}
+		  }
+		});
+		
+		
+	});
+	
+})(jQuery);
